@@ -36,11 +36,12 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TenChucVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.lsvChucVu = new System.Windows.Forms.ListView();
-            this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaChucVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -114,6 +115,7 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -125,6 +127,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnTimKiem);
             this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Controls.Add(this.comboBox1);
@@ -132,9 +135,19 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 44);
+            this.groupBox3.Size = new System.Drawing.Size(376, 74);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(295, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -147,10 +160,10 @@
             this.comboBox1.Size = new System.Drawing.Size(95, 21);
             this.comboBox1.TabIndex = 1;
             // 
-            // colTenCV
+            // TenChucVu
             // 
-            this.colTenCV.Text = "Tên chức vụ";
-            this.colTenCV.Width = 190;
+            this.TenChucVu.Text = "Tên chức vụ";
+            this.TenChucVu.Width = 190;
             // 
             // label1
             // 
@@ -166,29 +179,29 @@
             // 
             this.lsvChucVu.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lsvChucVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colMaCV,
-            this.colTenCV});
+            this.MaChucVu,
+            this.TenChucVu});
             this.lsvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvChucVu.ForeColor = System.Drawing.Color.Black;
             this.lsvChucVu.Location = new System.Drawing.Point(3, 16);
             this.lsvChucVu.Name = "lsvChucVu";
-            this.lsvChucVu.Size = new System.Drawing.Size(370, 368);
+            this.lsvChucVu.Size = new System.Drawing.Size(370, 338);
             this.lsvChucVu.TabIndex = 0;
             this.lsvChucVu.UseCompatibleStateImageBehavior = false;
             this.lsvChucVu.View = System.Windows.Forms.View.Details;
             // 
-            // colMaCV
+            // MaChucVu
             // 
-            this.colMaCV.Text = "Chức vụ";
-            this.colMaCV.Width = 176;
+            this.MaChucVu.Text = "Chức vụ";
+            this.MaChucVu.Width = 176;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lsvChucVu);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 60);
+            this.groupBox4.Location = new System.Drawing.Point(3, 90);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(376, 387);
+            this.groupBox4.Size = new System.Drawing.Size(376, 357);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             // 
@@ -279,6 +292,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChucVu";
             this.Text = "Chức vụ";
+            this.Load += new System.EventHandler(this.frmChucVu_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -304,12 +318,13 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ColumnHeader colTenCV;
+        private System.Windows.Forms.ColumnHeader TenChucVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lsvChucVu;
-        private System.Windows.Forms.ColumnHeader colMaCV;
+        private System.Windows.Forms.ColumnHeader MaChucVu;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

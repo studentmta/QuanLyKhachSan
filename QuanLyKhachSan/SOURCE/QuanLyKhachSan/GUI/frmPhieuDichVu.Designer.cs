@@ -34,11 +34,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lsvChucVu = new System.Windows.Forms.ListView();
-            this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaPhieuDichVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaPhieuDangKy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TenDichVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GiaDichVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -122,10 +123,10 @@
             // 
             this.lsvChucVu.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lsvChucVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colMaCV,
-            this.colTenCV,
-            this.columnHeader1,
-            this.columnHeader2});
+            this.MaPhieuDichVu,
+            this.MaPhieuDangKy,
+            this.TenDichVu,
+            this.GiaDichVu});
             this.lsvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvChucVu.ForeColor = System.Drawing.Color.Black;
             this.lsvChucVu.Location = new System.Drawing.Point(3, 16);
@@ -135,31 +136,32 @@
             this.lsvChucVu.UseCompatibleStateImageBehavior = false;
             this.lsvChucVu.View = System.Windows.Forms.View.Details;
             // 
-            // colMaCV
+            // MaPhieuDichVu
             // 
-            this.colMaCV.Text = "Mã phiếu dịch vụ";
-            this.colMaCV.Width = 99;
+            this.MaPhieuDichVu.Text = "Mã phiếu dịch vụ";
+            this.MaPhieuDichVu.Width = 99;
             // 
-            // colTenCV
+            // MaPhieuDangKy
             // 
-            this.colTenCV.Text = "Mã phiếu đăng ký";
-            this.colTenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colTenCV.Width = 108;
+            this.MaPhieuDangKy.Text = "Mã phiếu đăng ký";
+            this.MaPhieuDangKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MaPhieuDangKy.Width = 108;
             // 
-            // columnHeader1
+            // TenDichVu
             // 
-            this.columnHeader1.Text = "Tên dịch vụ";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 104;
+            this.TenDichVu.Text = "Tên dịch vụ";
+            this.TenDichVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TenDichVu.Width = 104;
             // 
-            // columnHeader2
+            // GiaDichVu
             // 
-            this.columnHeader2.Text = "Giá dịch vụ";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 112;
+            this.GiaDichVu.Text = "Giá dịch vụ";
+            this.GiaDichVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GiaDichVu.Width = 112;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnTimKiem);
             this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Controls.Add(this.comboBox1);
@@ -171,6 +173,16 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(373, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 22);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,6 +193,7 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -343,6 +356,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhieuDichVu";
             this.Text = "frmPhieuDichVu";
+            this.Load += new System.EventHandler(this.frmPhieuDichVu_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -361,8 +375,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListView lsvChucVu;
-        private System.Windows.Forms.ColumnHeader colMaCV;
-        private System.Windows.Forms.ColumnHeader colTenCV;
+        private System.Windows.Forms.ColumnHeader MaPhieuDichVu;
+        private System.Windows.Forms.ColumnHeader MaPhieuDangKy;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -375,11 +389,12 @@
         private System.Windows.Forms.TextBox txtMaCV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader TenDichVu;
+        private System.Windows.Forms.ColumnHeader GiaDichVu;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

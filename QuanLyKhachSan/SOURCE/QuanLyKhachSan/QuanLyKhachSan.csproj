@@ -54,14 +54,14 @@
     <Compile Include="DAL\PhieuDichVu_Controler.cs" />
     <Compile Include="DAL\Phong_Controler.cs" />
     <Compile Include="DAL\sqlConnect.cs" />
-    <Compile Include="ENTITY\ChucVu.cs" />
-    <Compile Include="ENTITY\HoaDon.cs" />
-    <Compile Include="ENTITY\KhachHang.cs" />
-    <Compile Include="ENTITY\LoaiPhong.cs" />
-    <Compile Include="ENTITY\NhanVien.cs" />
-    <Compile Include="ENTITY\PhieuDangKy.cs" />
-    <Compile Include="ENTITY\PhieuDichVu.cs" />
-    <Compile Include="ENTITY\Phong.cs" />
+    <Compile Include="GUI\ENTITY\ChucVu.cs" />
+    <Compile Include="GUI\ENTITY\HoaDon.cs" />
+    <Compile Include="GUI\ENTITY\KhachHang.cs" />
+    <Compile Include="GUI\ENTITY\LoaiPhong.cs" />
+    <Compile Include="GUI\ENTITY\NhanVien.cs" />
+    <Compile Include="GUI\ENTITY\PhieuDangKy.cs" />
+    <Compile Include="GUI\ENTITY\PhieuDichVu.cs" />
+    <Compile Include="GUI\ENTITY\Phong.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

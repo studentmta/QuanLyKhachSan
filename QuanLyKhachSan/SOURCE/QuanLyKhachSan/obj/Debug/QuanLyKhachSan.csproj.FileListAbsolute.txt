@@ -34,3 +34,20 @@ D:\ki6\Thực tập nhóm_TH14\GITHUB\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\D
 D:\ki6\Thực tập nhóm_TH14\GITHUB\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 D:\ki6\Thực tập nhóm_TH14\GITHUB\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\ki6\Thực tập nhóm_TH14\GITHUB\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmChucVu.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmHoaDon.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmKhachHang.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmLoaiPhong.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmMain.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmNhanVien.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDangKy.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDichVu.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhong.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+D:\Nam 3 Ki 2\TT Nhóm\Sửu\QuanLyKhachSan-master\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
