@@ -13,11 +13,14 @@ namespace QuanLyKhachSan.GUI
 {
     public partial class frmLoaiPhong : Form
     {
+        bool kt;
+
         public frmLoaiPhong()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         public void lockControl()         {             txtMaCV.Enabled = false;             txtTenCV.Enabled = false;             textBox1.Enabled = false;             btnHuy.Enabled = false;             btnLuu.Enabled = false;             btnSua.Enabled = false;             btnXoa.Enabled = false;             btnThem.Enabled = true;         }
 
         private void loadList()
@@ -79,6 +82,16 @@ namespace QuanLyKhachSan.GUI
                     addList(dr);
                 }
             }
+=======
+        private void resetControl()
+        {
+            
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> tuanthinh
         }
     }
 }

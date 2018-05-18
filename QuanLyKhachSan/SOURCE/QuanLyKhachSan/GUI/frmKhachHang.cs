@@ -13,11 +13,13 @@ namespace QuanLyKhachSan.GUI
 {
     public partial class frmKhachHang : Form
     {
+        bool kt;
         public frmKhachHang()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         public void lockControl()         {             txtMaNV.Enabled = false;             txtHoTen.Enabled = false;             txtDiaChi.Enabled = false;             txtMaPB.Enabled = false;             txtQuocTich.Enabled = false;             txtSDT.Enabled = false;             rdbNam.Enabled = false;             rdbNu.Enabled = false;             btnHuy.Enabled = false;             btnLuu.Enabled = false;             btnSua.Enabled = false;             btnXoa.Enabled = false;             btnThem.Enabled = true;         }
 
         private void loadList()
@@ -134,6 +136,19 @@ namespace QuanLyKhachSan.GUI
                     addList(dr);
                 }
             }
+=======
+        private void resetControl()
+        {
+            txtMaNV.ResetText();
+            txtHoTen.ResetText();
+            txtDiaChi.ResetText();
+            txtMaPB.ResetText();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> tuanthinh
         }
     }
 }

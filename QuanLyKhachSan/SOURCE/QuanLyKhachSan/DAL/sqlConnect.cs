@@ -10,7 +10,11 @@ namespace QuanLyKhachSan.DAL
 {
     class sqlConnect
     {
+<<<<<<< HEAD
         private string strConn = @"Data Source=DESKTOP-NE70A7B\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+=======
+        private string strConn = @"Data Source=.;Initial Catalog=QLKhachSan;intergrated Security=True";
+>>>>>>> tuanthinh
         private SqlCommand cmd = null;
         private SqlConnection conn = null;
 
