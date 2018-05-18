@@ -8,7 +8,21 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.DAL
 {
-    class NhanVien_Controler
+    class NhanVien_Controler : sqlConnect
     {
+        public void insertNhanVien(NhanVien nv)
+        {
+            openConnection();
+            string query = "insert into NHANVIEN(MaNV, TenNV, MaChucVu, GioiTinh, NgaySinh, DiaChi, SDT) values (@MaNV, @TenNV, @MaChucVu, @GioiTinh, @NgaySinh, @DiaChi, @SDT)";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@MaNV", nv.MaNV);
+            cmd.Parameters.AddWithValue("@TenNV", nv.TenNV);
+            cmd.Parameters.AddWithValue("@MaChucVu", nv.MaChucVu);
+            cmd.Parameters.AddWithValue("@GioiTinh", nv.GioiTinh);
+            cmd.Parameters.AddWithValue("@NgaySinh", nv.NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", nv.DiaChi);
+            cmd.Parameters.AddWithValue("@SDT", nv.SDT);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

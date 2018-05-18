@@ -36,6 +36,7 @@
             this.lsvChucVu = new System.Windows.Forms.ListView();
             this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.txtMaCV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
@@ -92,6 +92,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -141,6 +142,12 @@
             this.colTenCV.Text = "Tên loại phòng";
             this.colTenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colTenCV.Width = 131;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Trang bị";
+            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader1.Width = 128;
             // 
             // groupBox3
             // 
@@ -276,12 +283,6 @@
             this.groupBox1.Size = new System.Drawing.Size(432, 450);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Trang bị";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 128;
             // 
             // textBox1
             // 

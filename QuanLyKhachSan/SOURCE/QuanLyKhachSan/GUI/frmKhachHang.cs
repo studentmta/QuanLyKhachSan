@@ -12,11 +12,23 @@ namespace QuanLyKhachSan.GUI
 {
     public partial class frmKhachHang : Form
     {
+        bool kt;
         public frmKhachHang()
         {
             InitializeComponent();
         }
 
-        
+        private void resetControl()
+        {
+            txtMaNV.ResetText();
+            txtHoTen.ResetText();
+            txtDiaChi.ResetText();
+            txtMaPB.ResetText();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
