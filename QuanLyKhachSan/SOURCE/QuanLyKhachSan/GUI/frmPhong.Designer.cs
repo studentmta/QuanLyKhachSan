@@ -34,13 +34,13 @@
             this.txtQuocTich = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.DonVi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TinhTrang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TenPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDanToc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsvNhanVien = new System.Windows.Forms.ListView();
-            this.MaLoaiPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GiaPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -115,38 +115,38 @@
             this.txtMaNV.Size = new System.Drawing.Size(250, 20);
             this.txtMaNV.TabIndex = 12;
             // 
-            // DonVi
+            // colDanToc
             // 
-            this.DonVi.Text = "Đơn vị";
-            this.DonVi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DonVi.Width = 119;
+            this.colDanToc.Text = "Đơn vị";
+            this.colDanToc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colDanToc.Width = 119;
             // 
-            // TinhTrang
+            // colGioiTinh
             // 
-            this.TinhTrang.Text = "Tình trạng";
-            this.TinhTrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TinhTrang.Width = 150;
+            this.colGioiTinh.Text = "Tình trạng";
+            this.colGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colGioiTinh.Width = 150;
             // 
-            // TenPhong
+            // colHoTen
             // 
-            this.TenPhong.Text = "Tên phòng";
-            this.TenPhong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TenPhong.Width = 138;
+            this.colHoTen.Text = "Tên phòng";
+            this.colHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHoTen.Width = 138;
             // 
-            // MaPhong
+            // colMaNV
             // 
-            this.MaPhong.Text = "Mã phòng";
-            this.MaPhong.Width = 106;
+            this.colMaNV.Text = "Mã phòng";
+            this.colMaNV.Width = 106;
             // 
             // lsvNhanVien
             // 
             this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MaPhong,
-            this.TenPhong,
-            this.TinhTrang,
-            this.MaLoaiPhong,
-            this.GiaPhong,
-            this.DonVi});
+            this.colMaNV,
+            this.colHoTen,
+            this.colGioiTinh,
+            this.colNgaySinh,
+            this.colDiaChi,
+            this.colDanToc});
             this.lsvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvNhanVien.Location = new System.Drawing.Point(3, 16);
             this.lsvNhanVien.Name = "lsvNhanVien";
@@ -155,17 +155,17 @@
             this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsvNhanVien.View = System.Windows.Forms.View.Details;
             // 
-            // MaLoaiPhong
+            // colNgaySinh
             // 
-            this.MaLoaiPhong.Text = "Mã loại phòng";
-            this.MaLoaiPhong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaLoaiPhong.Width = 126;
+            this.colNgaySinh.Text = "Mã loại phòng";
+            this.colNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colNgaySinh.Width = 126;
             // 
-            // GiaPhong
+            // colDiaChi
             // 
-            this.GiaPhong.Text = "Giá phòng";
-            this.GiaPhong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.GiaPhong.Width = 155;
+            this.colDiaChi.Text = "Giá phòng";
+            this.colDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colDiaChi.Width = 155;
             // 
             // groupBox4
             // 
@@ -211,7 +211,6 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnTimKiem
             // 
@@ -223,7 +222,6 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cmbValue
             // 
@@ -237,12 +235,10 @@
             // 
             this.cmbKey.FormattingEnabled = true;
             this.cmbKey.Items.AddRange(new object[] {
-            "Mã phòng",
-            "Tên phòng",
-            "Mã loại phòng",
-            "Giá phòng",
-            "Tình trạng",
-            "Đơn vị"});
+            "Mã khách hàng",
+            "Tên khách hàng",
+            "CMND",
+            "Số điên thoại"});
             this.cmbKey.Location = new System.Drawing.Point(214, 3);
             this.cmbKey.Name = "cmbKey";
             this.cmbKey.Size = new System.Drawing.Size(121, 21);
@@ -402,7 +398,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhong";
             this.Text = "Phòng ";
-            this.Load += new System.EventHandler(this.frmPhong_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -421,13 +416,13 @@
         private System.Windows.Forms.TextBox txtQuocTich;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.ColumnHeader DonVi;
-        private System.Windows.Forms.ColumnHeader TinhTrang;
-        private System.Windows.Forms.ColumnHeader TenPhong;
-        private System.Windows.Forms.ColumnHeader MaPhong;
+        private System.Windows.Forms.ColumnHeader colDanToc;
+        private System.Windows.Forms.ColumnHeader colGioiTinh;
+        private System.Windows.Forms.ColumnHeader colHoTen;
+        private System.Windows.Forms.ColumnHeader colMaNV;
         private System.Windows.Forms.ListView lsvNhanVien;
-        private System.Windows.Forms.ColumnHeader MaLoaiPhong;
-        private System.Windows.Forms.ColumnHeader GiaPhong;
+        private System.Windows.Forms.ColumnHeader colNgaySinh;
+        private System.Windows.Forms.ColumnHeader colDiaChi;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;

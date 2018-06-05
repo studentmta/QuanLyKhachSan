@@ -33,13 +33,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lsvChucVu = new System.Windows.Forms.ListView();
-            this.MaHoaDon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NgayThanhToan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SoTienDatTruoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DonVi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,6 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -105,9 +103,9 @@
             // 
             this.groupBox4.Controls.Add(this.lsvChucVu);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 90);
+            this.groupBox4.Location = new System.Drawing.Point(3, 60);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(425, 357);
+            this.groupBox4.Size = new System.Drawing.Size(425, 387);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             // 
@@ -115,52 +113,51 @@
             // 
             this.lsvChucVu.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lsvChucVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MaHoaDon,
-            this.NgayThanhToan,
-            this.SoTienDatTruoc,
-            this.DonVi,
-            this.MaNV});
+            this.colMaCV,
+            this.colTenCV,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
             this.lsvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvChucVu.ForeColor = System.Drawing.Color.Black;
             this.lsvChucVu.Location = new System.Drawing.Point(3, 16);
             this.lsvChucVu.Name = "lsvChucVu";
-            this.lsvChucVu.Size = new System.Drawing.Size(419, 338);
+            this.lsvChucVu.Size = new System.Drawing.Size(419, 368);
             this.lsvChucVu.TabIndex = 0;
             this.lsvChucVu.UseCompatibleStateImageBehavior = false;
             this.lsvChucVu.View = System.Windows.Forms.View.Details;
             // 
-            // MaHoaDon
+            // colMaCV
             // 
-            this.MaHoaDon.Text = "Mã hóa đơn";
-            this.MaHoaDon.Width = 75;
+            this.colMaCV.Text = "Mã hóa đơn";
+            this.colMaCV.Width = 75;
             // 
-            // NgayThanhToan
+            // colTenCV
             // 
-            this.NgayThanhToan.Text = "Ngày thanh toán";
-            this.NgayThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NgayThanhToan.Width = 96;
+            this.colTenCV.Text = "Ngày thanh toán";
+            this.colTenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colTenCV.Width = 96;
             // 
-            // SoTienDatTruoc
+            // columnHeader1
             // 
-            this.SoTienDatTruoc.Text = "Số tiền đặt trước";
-            this.SoTienDatTruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SoTienDatTruoc.Width = 95;
+            this.columnHeader1.Text = "Số tiền đặt trước";
+            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader1.Width = 95;
             // 
-            // DonVi
+            // columnHeader2
             // 
-            this.DonVi.Text = "Đơn vị";
-            this.DonVi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DonVi.Width = 59;
+            this.columnHeader2.Text = "Đơn vị";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 59;
             // 
-            // MaNV
+            // columnHeader3
             // 
-            this.MaNV.Text = "Mã nhân viên";
-            this.MaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaNV.Width = 89;
+            this.columnHeader3.Text = "Mã nhân viên";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 89;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnTimKiem);
             this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Controls.Add(this.comboBox1);
@@ -168,19 +165,9 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(425, 74);
+            this.groupBox3.Size = new System.Drawing.Size(425, 44);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(347, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnTimKiem
             // 
@@ -192,7 +179,6 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -207,7 +193,6 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Mã hóa đơn",
-            "Ngày thanh toán",
             "Mã nhân viên"});
             this.comboBox1.Location = new System.Drawing.Point(67, 16);
             this.comboBox1.Name = "comboBox1";
@@ -336,7 +321,6 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -390,7 +374,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHoaDon";
             this.Text = "Hóa đơn";
-            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -408,8 +391,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListView lsvChucVu;
-        private System.Windows.Forms.ColumnHeader MaHoaDon;
-        private System.Windows.Forms.ColumnHeader NgayThanhToan;
+        private System.Windows.Forms.ColumnHeader colMaCV;
+        private System.Windows.Forms.ColumnHeader colTenCV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -427,11 +410,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ColumnHeader SoTienDatTruoc;
-        private System.Windows.Forms.ColumnHeader DonVi;
-        private System.Windows.Forms.ColumnHeader MaNV;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.DateTimePicker dtNgayKetThuc;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
     }
 }

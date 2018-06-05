@@ -63,5 +63,29 @@ namespace QuanLyKhachSan.GUI
             GUI.frmHoaDon frm = new frmHoaDon();
             frm.ShowDialog();
         }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.frmTK_DSNhanVien frm = new frmTK_DSNhanVien();
+            frm.ShowDialog();
+        }
+
+        private void nhânViênTrìnhĐộHọcVấnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            GUI.frmTK_TrangThietBi frm = new frmTK_TrangThietBi();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            GUI.frmTK_DoanhThu frm = new frmTK_DoanhThu();
+            frm.ShowDialog();
+        }
+
+        private void nhânViênChứcVụToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            GUI.frmTK_TinhTrangPhong frm = new frmTK_TinhTrangPhong();
+            frm.ShowDialog();
+        }
     }
 }

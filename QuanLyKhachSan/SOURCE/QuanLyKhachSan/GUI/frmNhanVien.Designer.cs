@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colQuocTich = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -50,15 +50,15 @@
             this.cmbValue = new System.Windows.Forms.TextBox();
             this.cmbKey = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.NgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
-            this.DiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDanToc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtDanToc = new System.Windows.Forms.TextBox();
-            this.MaChuVu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TenNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsvNhanVien = new System.Windows.Forms.ListView();
-            this.GioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -71,11 +71,11 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SDT
+            // colQuocTich
             // 
-            this.SDT.Text = "Số điện thoại";
-            this.SDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SDT.Width = 135;
+            this.colQuocTich.Text = "Số điện thoại";
+            this.colQuocTich.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colQuocTich.Width = 135;
             // 
             // btnHuy
             // 
@@ -203,7 +203,6 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -263,7 +262,6 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cmbValue
             // 
@@ -278,10 +276,9 @@
             this.cmbKey.FormattingEnabled = true;
             this.cmbKey.Items.AddRange(new object[] {
             "Mã nhân viên",
-            "Tên nhân viên",
             "Mã chức vụ",
+            "Họ tên",
             "Giới tính",
-            "Ngày sinh",
             "Địa chỉ",
             "Số điên thoại"});
             this.cmbKey.Location = new System.Drawing.Point(256, 1);
@@ -298,11 +295,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo";
             // 
-            // NgaySinh
+            // colDiaChi
             // 
-            this.NgaySinh.Text = "Ngày sinh";
-            this.NgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NgaySinh.Width = 120;
+            this.colDiaChi.Text = "Ngày sinh";
+            this.colDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colDiaChi.Width = 120;
             // 
             // label6
             // 
@@ -313,11 +310,11 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Số điện thoại";
             // 
-            // DiaChi
+            // colDanToc
             // 
-            this.DiaChi.Text = "Địa chỉ";
-            this.DiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DiaChi.Width = 111;
+            this.colDanToc.Text = "Địa chỉ";
+            this.colDanToc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colDanToc.Width = 111;
             // 
             // txtDanToc
             // 
@@ -326,33 +323,33 @@
             this.txtDanToc.Size = new System.Drawing.Size(279, 20);
             this.txtDanToc.TabIndex = 15;
             // 
-            // MaChuVu
+            // colGioiTinh
             // 
-            this.MaChuVu.Text = "Mã chức vụ";
-            this.MaChuVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaChuVu.Width = 122;
+            this.colGioiTinh.Text = "Tên nhân viên";
+            this.colGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colGioiTinh.Width = 122;
             // 
-            // TenNV
+            // colHoTen
             // 
-            this.TenNV.Text = "Tên nhân viên";
-            this.TenNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TenNV.Width = 136;
+            this.colHoTen.Text = "Mã chức vụ";
+            this.colHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colHoTen.Width = 136;
             // 
-            // MaNV
+            // colMaNV
             // 
-            this.MaNV.Text = "Mã nhân viên";
-            this.MaNV.Width = 98;
+            this.colMaNV.Text = "Mã nhân viên";
+            this.colMaNV.Width = 98;
             // 
             // lsvNhanVien
             // 
             this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MaNV,
-            this.TenNV,
-            this.MaChuVu,
-            this.GioiTinh,
-            this.NgaySinh,
-            this.DiaChi,
-            this.SDT});
+            this.colMaNV,
+            this.colHoTen,
+            this.colGioiTinh,
+            this.colNgaySinh,
+            this.colDiaChi,
+            this.colDanToc,
+            this.colQuocTich});
             this.lsvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvNhanVien.Location = new System.Drawing.Point(3, 16);
             this.lsvNhanVien.Name = "lsvNhanVien";
@@ -361,11 +358,11 @@
             this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsvNhanVien.View = System.Windows.Forms.View.Details;
             // 
-            // GioiTinh
+            // colNgaySinh
             // 
-            this.GioiTinh.Text = "Giới tính";
-            this.GioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.GioiTinh.Width = 100;
+            this.colNgaySinh.Text = "Giới tính";
+            this.colNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colNgaySinh.Width = 100;
             // 
             // groupBox4
             // 
@@ -449,7 +446,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNhanVien";
             this.Text = "Nhân viên";
-            this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -462,7 +458,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ColumnHeader SDT;
+        private System.Windows.Forms.ColumnHeader colQuocTich;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
@@ -484,15 +480,15 @@
         private System.Windows.Forms.TextBox cmbValue;
         private System.Windows.Forms.ComboBox cmbKey;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader NgaySinh;
+        private System.Windows.Forms.ColumnHeader colDiaChi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ColumnHeader DiaChi;
+        private System.Windows.Forms.ColumnHeader colDanToc;
         private System.Windows.Forms.TextBox txtDanToc;
-        private System.Windows.Forms.ColumnHeader MaChuVu;
-        private System.Windows.Forms.ColumnHeader TenNV;
-        private System.Windows.Forms.ColumnHeader MaNV;
+        private System.Windows.Forms.ColumnHeader colGioiTinh;
+        private System.Windows.Forms.ColumnHeader colHoTen;
+        private System.Windows.Forms.ColumnHeader colMaNV;
         private System.Windows.Forms.ListView lsvNhanVien;
-        private System.Windows.Forms.ColumnHeader GioiTinh;
+        private System.Windows.Forms.ColumnHeader colNgaySinh;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDiaChi;

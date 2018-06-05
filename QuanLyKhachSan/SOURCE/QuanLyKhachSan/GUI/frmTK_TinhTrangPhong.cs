@@ -16,5 +16,35 @@ namespace QuanLyKhachSan.GUI
         {
             InitializeComponent();
         }
+        private void frmTK_TinhTrangPhong_Load(object sender, EventArgs e)
+        {
+            loadDataGirdView();
+            dgvTTP.AutoResizeColumns();
+            dgvTTP.AutoResizeRows();
+        }
+
+
+        private void loadDataGirdView()
+        {
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+        }
+
+
+        private void bntTK_Click(object sender, EventArgs e)
+        {
+            if (cbOption_ThongKe.Text.Equals("Trống"))
+            {
+                DAL.sqlConnect sql = new DAL.sqlConnect();
+                dgvTTP.DataSource = sql.TK("select MaPhong,TenPhong,TinhTrang from Phong  where TinhTrang=N'Trống' ");
+                dgvTTP.AutoResizeColumns();
+                dgvTTP.AutoResizeRows();
+            }
+
+            if (cbOption_ThongKe.Text.Equals("Full"))
+            {
+                DAL.sqlConnect sql = new DAL.sqlConnect();
+                dgvTTP.DataSource = sql.TK("select MaPhong,TenPhong,TinhTrang from Phong  where TinhTrang=N'Full' ");
+            }
+        }
     }
 }

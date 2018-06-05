@@ -16,5 +16,28 @@ namespace QuanLyKhachSan.GUI
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void frmTK_TrangBi_Load(object sender, EventArgs e)
+        {
+            loadDataGirdView();
+            dgvTB.AutoResizeColumns();
+            dgvTB.AutoResizeRows();
+        }
+
+
+        private void loadDataGirdView()
+        {
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+        }
+
+        private void bntTB_Click(object sender, EventArgs e)
+        {
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            dgvTB.DataSource = sql.TK("select MaPhong,TenPhong,TrangBi from Phong p, LoaiPhong l  where p.MaLoaiPhong=l.MaLoaiPhong ");
+        }
     }
 }
