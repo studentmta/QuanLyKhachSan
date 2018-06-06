@@ -44,14 +44,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGiaDichVu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenDV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtTenCV = new System.Windows.Forms.TextBox();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.txtMaPhieuDK = new System.Windows.Forms.TextBox();
+            this.txtMaPhieuDV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
@@ -71,6 +71,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -95,6 +96,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -214,17 +216,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtGiaDichVu);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTenDV);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.txtTenCV);
-            this.groupBox1.Controls.Add(this.txtMaCV);
+            this.groupBox1.Controls.Add(this.txtMaPhieuDK);
+            this.groupBox1.Controls.Add(this.txtMaPhieuDV);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -234,14 +236,14 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // textBox2
+            // txtGiaDichVu
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(138, 158);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 27);
-            this.textBox2.TabIndex = 12;
+            this.txtGiaDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaDichVu.Location = new System.Drawing.Point(138, 158);
+            this.txtGiaDichVu.Multiline = true;
+            this.txtGiaDichVu.Name = "txtGiaDichVu";
+            this.txtGiaDichVu.Size = new System.Drawing.Size(292, 27);
+            this.txtGiaDichVu.TabIndex = 12;
             // 
             // label5
             // 
@@ -253,14 +255,14 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Giá dịch vụ";
             // 
-            // textBox1
+            // txtTenDV
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(138, 113);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDV.Location = new System.Drawing.Point(138, 113);
+            this.txtTenDV.Multiline = true;
+            this.txtTenDV.Name = "txtTenDV";
+            this.txtTenDV.Size = new System.Drawing.Size(292, 27);
+            this.txtTenDV.TabIndex = 10;
             // 
             // label4
             // 
@@ -283,6 +285,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnSua
             // 
@@ -296,23 +299,23 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // txtTenCV
+            // txtMaPhieuDK
             // 
-            this.txtTenCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenCV.Location = new System.Drawing.Point(138, 66);
-            this.txtTenCV.Multiline = true;
-            this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(292, 27);
-            this.txtTenCV.TabIndex = 3;
+            this.txtMaPhieuDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPhieuDK.Location = new System.Drawing.Point(138, 66);
+            this.txtMaPhieuDK.Multiline = true;
+            this.txtMaPhieuDK.Name = "txtMaPhieuDK";
+            this.txtMaPhieuDK.Size = new System.Drawing.Size(292, 27);
+            this.txtMaPhieuDK.TabIndex = 3;
             // 
-            // txtMaCV
+            // txtMaPhieuDV
             // 
-            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCV.Location = new System.Drawing.Point(138, 24);
-            this.txtMaCV.Multiline = true;
-            this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(292, 27);
-            this.txtMaCV.TabIndex = 2;
+            this.txtMaPhieuDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPhieuDV.Location = new System.Drawing.Point(138, 24);
+            this.txtMaPhieuDV.Multiline = true;
+            this.txtMaPhieuDV.Name = "txtMaPhieuDV";
+            this.txtMaPhieuDV.Size = new System.Drawing.Size(292, 27);
+            this.txtMaPhieuDV.TabIndex = 2;
             // 
             // label2
             // 
@@ -371,15 +374,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.TextBox txtTenCV;
-        private System.Windows.Forms.TextBox txtMaCV;
+        private System.Windows.Forms.TextBox txtMaPhieuDK;
+        private System.Windows.Forms.TextBox txtMaPhieuDV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGiaDichVu;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenDV;
         private System.Windows.Forms.Label label4;
     }
 }

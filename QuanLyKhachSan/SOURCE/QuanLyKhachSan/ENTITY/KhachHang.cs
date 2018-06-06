@@ -12,10 +12,10 @@ namespace QuanLyKhachSan.ENTITY
         public string TenKH { get; set; }
         public string CMND { get; set; }
         public string DiaChi { get; set; }
-        public string GioiTinh { get; set; }
+        public bool GioiTinh { get; set; }
         public string SDT { get; set; }
         public string QuocTich { get; set; }
-        public KhachHang(string maKH, string tenKH, string cmnd, string diaChi, string gioiTinh, string sdt, string quocTich)
+        public KhachHang(string maKH, string tenKH, string cmnd, string diaChi, bool gioiTinh, string sdt, string quocTich)
         {
             MaKH = maKH;
             TenKH = tenKH;

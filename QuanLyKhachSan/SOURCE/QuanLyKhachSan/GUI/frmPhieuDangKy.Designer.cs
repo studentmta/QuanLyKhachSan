@@ -45,11 +45,11 @@
             this.cmbKey = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtMaPB = new System.Windows.Forms.TextBox();
+            this.txtDonVi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTraTruoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtQuocTich = new System.Windows.Forms.TextBox();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.colDanToc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,12 +59,12 @@
             this.colNgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.txtMaPhieuDK = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayDi = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
@@ -90,6 +90,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -102,6 +103,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -139,6 +141,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblMaNV
             // 
@@ -244,12 +247,12 @@
             this.colDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colDiaChi.Width = 115;
             // 
-            // txtMaPB
+            // txtDonVi
             // 
-            this.txtMaPB.Location = new System.Drawing.Point(492, 92);
-            this.txtMaPB.Name = "txtMaPB";
-            this.txtMaPB.Size = new System.Drawing.Size(301, 20);
-            this.txtMaPB.TabIndex = 18;
+            this.txtDonVi.Location = new System.Drawing.Point(492, 92);
+            this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.Size = new System.Drawing.Size(301, 20);
+            this.txtDonVi.TabIndex = 18;
             // 
             // label7
             // 
@@ -260,12 +263,12 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Mã phòng";
             // 
-            // txtSDT
+            // txtTraTruoc
             // 
-            this.txtSDT.Location = new System.Drawing.Point(492, 61);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(301, 20);
-            this.txtSDT.TabIndex = 17;
+            this.txtTraTruoc.Location = new System.Drawing.Point(492, 61);
+            this.txtTraTruoc.Name = "txtTraTruoc";
+            this.txtTraTruoc.Size = new System.Drawing.Size(301, 20);
+            this.txtTraTruoc.TabIndex = 17;
             // 
             // label8
             // 
@@ -276,12 +279,12 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Trả trước";
             // 
-            // txtQuocTich
+            // txtMaPhong
             // 
-            this.txtQuocTich.Location = new System.Drawing.Point(492, 32);
-            this.txtQuocTich.Name = "txtQuocTich";
-            this.txtQuocTich.Size = new System.Drawing.Size(301, 20);
-            this.txtQuocTich.TabIndex = 16;
+            this.txtMaPhong.Location = new System.Drawing.Point(492, 32);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(301, 20);
+            this.txtMaPhong.TabIndex = 16;
             // 
             // label9
             // 
@@ -362,31 +365,31 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(131, 92);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(244, 20);
-            this.txtDiaChi.TabIndex = 14;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(131, 61);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(244, 20);
-            this.txtHoTen.TabIndex = 13;
-            // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(131, 32);
+            this.txtMaNV.Location = new System.Drawing.Point(131, 92);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(244, 20);
-            this.txtMaNV.TabIndex = 12;
+            this.txtMaNV.TabIndex = 14;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(131, 61);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(244, 20);
+            this.txtMaKH.TabIndex = 13;
+            // 
+            // txtMaPhieuDK
+            // 
+            this.txtMaPhieuDK.Location = new System.Drawing.Point(131, 32);
+            this.txtMaPhieuDK.Name = "txtMaPhieuDK";
+            this.txtMaPhieuDK.Size = new System.Drawing.Size(244, 20);
+            this.txtMaPhieuDK.TabIndex = 12;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtNgayKetThuc);
-            this.groupBox1.Controls.Add(this.dtNgayBatDau);
+            this.groupBox1.Controls.Add(this.dtNgayDi);
+            this.groupBox1.Controls.Add(this.dtNgayLap);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnHuy);
@@ -397,15 +400,15 @@
             this.groupBox1.Controls.Add(this.lblMaNV);
             this.groupBox1.Controls.Add(this.lblHoTen);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtMaPB);
+            this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtTraTruoc);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtQuocTich);
+            this.groupBox1.Controls.Add(this.txtMaPhong);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.txtHoTen);
             this.groupBox1.Controls.Add(this.txtMaNV);
+            this.groupBox1.Controls.Add(this.txtMaKH);
+            this.groupBox1.Controls.Add(this.txtMaPhieuDK);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -414,24 +417,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu đăng ký";
             // 
-            // dtNgayKetThuc
+            // dtNgayDi
             // 
-            this.dtNgayKetThuc.CustomFormat = "";
-            this.dtNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayKetThuc.Location = new System.Drawing.Point(131, 153);
-            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
-            this.dtNgayKetThuc.Size = new System.Drawing.Size(244, 22);
-            this.dtNgayKetThuc.TabIndex = 33;
+            this.dtNgayDi.CustomFormat = "";
+            this.dtNgayDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayDi.Location = new System.Drawing.Point(131, 153);
+            this.dtNgayDi.Name = "dtNgayDi";
+            this.dtNgayDi.Size = new System.Drawing.Size(244, 22);
+            this.dtNgayDi.TabIndex = 33;
             // 
-            // dtNgayBatDau
+            // dtNgayLap
             // 
-            this.dtNgayBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayBatDau.Location = new System.Drawing.Point(131, 122);
-            this.dtNgayBatDau.Name = "dtNgayBatDau";
-            this.dtNgayBatDau.Size = new System.Drawing.Size(244, 22);
-            this.dtNgayBatDau.TabIndex = 32;
+            this.dtNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayLap.Location = new System.Drawing.Point(131, 122);
+            this.dtNgayLap.Name = "dtNgayLap";
+            this.dtNgayLap.Size = new System.Drawing.Size(244, 22);
+            this.dtNgayLap.TabIndex = 32;
             // 
             // label6
             // 
@@ -491,11 +494,11 @@
         private System.Windows.Forms.ComboBox cmbKey;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader colDiaChi;
-        private System.Windows.Forms.TextBox txtMaPB;
+        private System.Windows.Forms.TextBox txtDonVi;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtTraTruoc;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtQuocTich;
+        private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ColumnHeader colDanToc;
         private System.Windows.Forms.ColumnHeader colGioiTinh;
@@ -505,12 +508,12 @@
         private System.Windows.Forms.ColumnHeader colNgaySinh;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.TextBox txtMaPhieuDK;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtNgayKetThuc;
-        private System.Windows.Forms.DateTimePicker dtNgayBatDau;
+        private System.Windows.Forms.DateTimePicker dtNgayDi;
+        private System.Windows.Forms.DateTimePicker dtNgayLap;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
     }

@@ -55,3 +55,25 @@ C:\Users\asus\Desktop\ttnhom\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan
 C:\Users\asus\Desktop\ttnhom\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DoanhThu.resources
 C:\Users\asus\Desktop\ttnhom\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TrangThietBi.resources
 C:\Users\asus\Desktop\ttnhom\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TinhTrangPhong.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmChucVu.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmHoaDon.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmKhachHang.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmLoaiPhong.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmMain.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmNhanVien.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDangKy.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDichVu.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhong.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DoanhThu.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DSNhanVien.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TinhTrangPhong.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TrangThietBi.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb

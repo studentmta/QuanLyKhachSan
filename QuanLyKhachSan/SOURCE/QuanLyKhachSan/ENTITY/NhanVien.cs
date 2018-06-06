@@ -11,11 +11,11 @@ namespace QuanLyKhachSan.ENTITY
         public string MaNV { get; set; }
         public string TenNV { get; set; }
         public string MaChucVu { get; set; }
-        public string GioiTinh { get; set; }
+        public bool GioiTinh { get; set; }
         public DateTime NgaySinh { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }
-        public NhanVien(string maNV, string tenNV, string maChuVu, string gioiTinh, DateTime ngaySinh, string diaChi, string sDT)
+        public NhanVien(string maNV, string tenNV, string maChuVu, bool gioiTinh, DateTime ngaySinh, string diaChi, string sDT)
         {
             MaNV = maNV;
             TenNV = tenNV;

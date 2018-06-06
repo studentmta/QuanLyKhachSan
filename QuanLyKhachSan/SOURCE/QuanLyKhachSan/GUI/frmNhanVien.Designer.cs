@@ -42,7 +42,7 @@
             this.rdbNam = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBacLuong = new System.Windows.Forms.TextBox();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -53,7 +53,7 @@
             this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.colDanToc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtDanToc = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,7 +62,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
@@ -88,6 +88,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -100,6 +101,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -137,6 +139,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label12
             // 
@@ -213,12 +216,12 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Giới tính";
             // 
-            // txtBacLuong
+            // txtChucVu
             // 
-            this.txtBacLuong.Location = new System.Drawing.Point(125, 60);
-            this.txtBacLuong.Name = "txtBacLuong";
-            this.txtBacLuong.Size = new System.Drawing.Size(268, 20);
-            this.txtBacLuong.TabIndex = 21;
+            this.txtChucVu.Location = new System.Drawing.Point(125, 60);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(268, 20);
+            this.txtChucVu.TabIndex = 21;
             // 
             // label4
             // 
@@ -316,12 +319,12 @@
             this.colDanToc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colDanToc.Width = 111;
             // 
-            // txtDanToc
+            // txtSDT
             // 
-            this.txtDanToc.Location = new System.Drawing.Point(533, 93);
-            this.txtDanToc.Name = "txtDanToc";
-            this.txtDanToc.Size = new System.Drawing.Size(279, 20);
-            this.txtDanToc.TabIndex = 15;
+            this.txtSDT.Location = new System.Drawing.Point(533, 93);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(279, 20);
+            this.txtSDT.TabIndex = 15;
             // 
             // colGioiTinh
             // 
@@ -393,12 +396,12 @@
             this.txtDiaChi.Size = new System.Drawing.Size(279, 20);
             this.txtDiaChi.TabIndex = 14;
             // 
-            // txtHoTen
+            // txtTenNV
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(125, 89);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(268, 20);
-            this.txtHoTen.TabIndex = 13;
+            this.txtTenNV.Location = new System.Drawing.Point(125, 89);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(268, 20);
+            this.txtTenNV.TabIndex = 13;
             // 
             // txtMaNV
             // 
@@ -421,13 +424,13 @@
             this.groupBox1.Controls.Add(this.lblHoTen);
             this.groupBox1.Controls.Add(this.rdbNam);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtBacLuong);
+            this.groupBox1.Controls.Add(this.txtChucVu);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtDanToc);
+            this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -472,7 +475,7 @@
         private System.Windows.Forms.RadioButton rdbNam;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBacLuong;
+        private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -483,7 +486,7 @@
         private System.Windows.Forms.ColumnHeader colDiaChi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ColumnHeader colDanToc;
-        private System.Windows.Forms.TextBox txtDanToc;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.ColumnHeader colGioiTinh;
         private System.Windows.Forms.ColumnHeader colHoTen;
         private System.Windows.Forms.ColumnHeader colMaNV;
@@ -492,7 +495,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.GroupBox groupBox1;
     }

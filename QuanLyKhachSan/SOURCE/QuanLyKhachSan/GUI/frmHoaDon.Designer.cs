@@ -44,18 +44,18 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dtNgaytt = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtmaNV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDonVi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoTienDatTruoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -86,6 +86,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -211,20 +212,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtNgayKetThuc);
+            this.groupBox1.Controls.Add(this.dtNgaytt);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtmaNV);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtSoTienDatTruoc);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.txtMaCV);
+            this.groupBox1.Controls.Add(this.txtMaHD);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -233,15 +234,15 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // dtNgayKetThuc
+            // dtNgaytt
             // 
-            this.dtNgayKetThuc.CustomFormat = "";
-            this.dtNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayKetThuc.Location = new System.Drawing.Point(125, 68);
-            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
-            this.dtNgayKetThuc.Size = new System.Drawing.Size(292, 22);
-            this.dtNgayKetThuc.TabIndex = 35;
+            this.dtNgaytt.CustomFormat = "";
+            this.dtNgaytt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaytt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaytt.Location = new System.Drawing.Point(125, 68);
+            this.dtNgaytt.Name = "dtNgaytt";
+            this.dtNgaytt.Size = new System.Drawing.Size(292, 22);
+            this.dtNgaytt.TabIndex = 35;
             // 
             // label7
             // 
@@ -253,14 +254,14 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Ngày thanh toán";
             // 
-            // textBox3
+            // txtmaNV
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(125, 188);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(292, 27);
-            this.textBox3.TabIndex = 14;
+            this.txtmaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmaNV.Location = new System.Drawing.Point(125, 188);
+            this.txtmaNV.Multiline = true;
+            this.txtmaNV.Name = "txtmaNV";
+            this.txtmaNV.Size = new System.Drawing.Size(292, 27);
+            this.txtmaNV.TabIndex = 14;
             // 
             // label6
             // 
@@ -272,14 +273,14 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Mã nhân viên";
             // 
-            // textBox2
+            // txtDonVi
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(125, 146);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 27);
-            this.textBox2.TabIndex = 12;
+            this.txtDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonVi.Location = new System.Drawing.Point(125, 146);
+            this.txtDonVi.Multiline = true;
+            this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.Size = new System.Drawing.Size(292, 27);
+            this.txtDonVi.TabIndex = 12;
             // 
             // label5
             // 
@@ -291,14 +292,14 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Đơn vị";
             // 
-            // textBox1
+            // txtSoTienDatTruoc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 105);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtSoTienDatTruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTienDatTruoc.Location = new System.Drawing.Point(125, 105);
+            this.txtSoTienDatTruoc.Multiline = true;
+            this.txtSoTienDatTruoc.Name = "txtSoTienDatTruoc";
+            this.txtSoTienDatTruoc.Size = new System.Drawing.Size(292, 27);
+            this.txtSoTienDatTruoc.TabIndex = 10;
             // 
             // label4
             // 
@@ -321,6 +322,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -333,6 +335,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -346,14 +349,14 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // txtMaCV
+            // txtMaHD
             // 
-            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCV.Location = new System.Drawing.Point(125, 24);
-            this.txtMaCV.Multiline = true;
-            this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(292, 27);
-            this.txtMaCV.TabIndex = 2;
+            this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHD.Location = new System.Drawing.Point(125, 24);
+            this.txtMaHD.Multiline = true;
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(292, 27);
+            this.txtMaHD.TabIndex = 2;
             // 
             // label1
             // 
@@ -402,18 +405,18 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.TextBox txtMaCV;
+        private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtmaNV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDonVi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSoTienDatTruoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.DateTimePicker dtNgayKetThuc;
+        private System.Windows.Forms.DateTimePicker dtNgaytt;
         private System.Windows.Forms.Label label7;
     }
 }

@@ -36,6 +36,7 @@
             this.lsvChucVu = new System.Windows.Forms.ListView();
             this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -44,12 +45,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.txtTenCV = new System.Windows.Forms.TextBox();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
+            this.txtTenLP = new System.Windows.Forms.TextBox();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTrangBi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -68,6 +68,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -92,6 +93,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -141,6 +143,12 @@
             this.colTenCV.Text = "Tên loại phòng";
             this.colTenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colTenCV.Width = 131;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Trang bị";
+            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader1.Width = 128;
             // 
             // groupBox3
             // 
@@ -228,24 +236,25 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // txtTenCV
+            // txtTenLP
             // 
-            this.txtTenCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenCV.Location = new System.Drawing.Point(118, 66);
-            this.txtTenCV.Multiline = true;
-            this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(292, 27);
-            this.txtTenCV.TabIndex = 3;
+            this.txtTenLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLP.Location = new System.Drawing.Point(118, 66);
+            this.txtTenLP.Multiline = true;
+            this.txtTenLP.Name = "txtTenLP";
+            this.txtTenLP.Size = new System.Drawing.Size(292, 27);
+            this.txtTenLP.TabIndex = 3;
             // 
-            // txtMaCV
+            // txtMaPhong
             // 
-            this.txtMaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCV.Location = new System.Drawing.Point(118, 24);
-            this.txtMaCV.Multiline = true;
-            this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(292, 27);
-            this.txtMaCV.TabIndex = 2;
+            this.txtMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPhong.Location = new System.Drawing.Point(118, 24);
+            this.txtMaPhong.Multiline = true;
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(292, 27);
+            this.txtMaPhong.TabIndex = 2;
             // 
             // label2
             // 
@@ -259,15 +268,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTrangBi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.txtTenCV);
-            this.groupBox1.Controls.Add(this.txtMaCV);
+            this.groupBox1.Controls.Add(this.txtTenLP);
+            this.groupBox1.Controls.Add(this.txtMaPhong);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -277,20 +286,14 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // columnHeader1
+            // txtTrangBi
             // 
-            this.columnHeader1.Text = "Trang bị";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 128;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(118, 110);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtTrangBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangBi.Location = new System.Drawing.Point(118, 110);
+            this.txtTrangBi.Multiline = true;
+            this.txtTrangBi.Name = "txtTrangBi";
+            this.txtTrangBi.Size = new System.Drawing.Size(292, 27);
+            this.txtTrangBi.TabIndex = 10;
             // 
             // label4
             // 
@@ -339,12 +342,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.TextBox txtTenCV;
-        private System.Windows.Forms.TextBox txtMaCV;
+        private System.Windows.Forms.TextBox txtTenLP;
+        private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTrangBi;
         private System.Windows.Forms.Label label4;
     }
 }

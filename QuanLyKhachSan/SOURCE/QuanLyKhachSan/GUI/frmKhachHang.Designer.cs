@@ -47,7 +47,7 @@
             this.cmbKey = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtMaPB = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -100,6 +100,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -137,15 +138,16 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblMaNV
             // 
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Location = new System.Drawing.Point(30, 35);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(72, 13);
+            this.lblMaNV.Size = new System.Drawing.Size(82, 13);
             this.lblMaNV.TabIndex = 0;
-            this.lblMaNV.Text = "Mã nhân viên";
+            this.lblMaNV.Text = "Mã khách hàng";
             // 
             // rdbNu
             // 
@@ -266,12 +268,12 @@
             this.colDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colDiaChi.Width = 108;
             // 
-            // txtMaPB
+            // txtCMND
             // 
-            this.txtMaPB.Location = new System.Drawing.Point(544, 32);
-            this.txtMaPB.Name = "txtMaPB";
-            this.txtMaPB.Size = new System.Drawing.Size(301, 20);
-            this.txtMaPB.TabIndex = 18;
+            this.txtCMND.Location = new System.Drawing.Point(544, 32);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(301, 20);
+            this.txtCMND.TabIndex = 18;
             // 
             // label7
             // 
@@ -397,12 +399,12 @@
             this.txtHoTen.Size = new System.Drawing.Size(301, 20);
             this.txtHoTen.TabIndex = 13;
             // 
-            // txtMaNV
+            // txtMaKH
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(118, 32);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(301, 20);
-            this.txtMaNV.TabIndex = 12;
+            this.txtMaKH.Location = new System.Drawing.Point(118, 32);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(301, 20);
+            this.txtMaKH.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -417,7 +419,7 @@
             this.groupBox1.Controls.Add(this.rdbNam);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtMaPB);
+            this.groupBox1.Controls.Add(this.txtCMND);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label8);
@@ -425,7 +427,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtHoTen);
-            this.groupBox1.Controls.Add(this.txtMaNV);
+            this.groupBox1.Controls.Add(this.txtMaKH);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -474,7 +476,7 @@
         private System.Windows.Forms.ComboBox cmbKey;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader colDiaChi;
-        private System.Windows.Forms.TextBox txtMaPB;
+        private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label8;
@@ -490,7 +492,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }
