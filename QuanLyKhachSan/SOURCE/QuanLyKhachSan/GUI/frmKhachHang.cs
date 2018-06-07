@@ -55,5 +55,12 @@ namespace QuanLyKhachSan.GUI
             }
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.KhachHang kh = new ENTITY.KhachHang(txtMaKH.Text.Trim(), txtHoTen.Text.Trim(), txtCMND.Text.Trim(), txtDiaChi.Text.Trim(), checkGioiTinh(), txtSDT.Text.Trim(), txtQuocTich.Text.Trim());
+            DAL.KhachHang_Controler k = new DAL.KhachHang_Controler();
+            k.EditKhachHang(kh);
+        }
     }
 }

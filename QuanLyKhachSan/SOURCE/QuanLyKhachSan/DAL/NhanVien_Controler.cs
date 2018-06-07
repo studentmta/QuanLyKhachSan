@@ -24,5 +24,20 @@ namespace QuanLyKhachSan.DAL
             cmd.Parameters.AddWithValue("@SDT", nv.SDT);
             cmd.ExecuteNonQuery();
         }
+
+        public void EditNhanVien(NhanVien nv)
+        {
+            openConnection();
+            string query = "update NHANVIEN set TenNV = @TenNV, MaChucVu = @MaChucVu, GioiTinh = @GioiTinh, NgaySinh = @NgaySinh, DiaChi = @DiaChi, SDT = @SDT where MaNV = @MaNV";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@MaNV", nv.MaNV);
+            cmd.Parameters.AddWithValue("@TenNV", nv.TenNV);
+            cmd.Parameters.AddWithValue("@MaChucVu", nv.MaChucVu);
+            cmd.Parameters.AddWithValue("@GioiTinh", nv.GioiTinh);
+            cmd.Parameters.AddWithValue("@NgaySinh", nv.NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", nv.DiaChi);
+            cmd.Parameters.AddWithValue("@SDT", nv.SDT);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

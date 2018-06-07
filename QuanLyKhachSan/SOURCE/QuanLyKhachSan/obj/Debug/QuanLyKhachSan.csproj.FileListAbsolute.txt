@@ -77,3 +77,25 @@ E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\Quan
 E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 E:\MTA\3_st\K2\Thực tập nhóm_TH14\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmChucVu.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmHoaDon.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmKhachHang.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmLoaiPhong.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmMain.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmNhanVien.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDangKy.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDichVu.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhong.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DoanhThu.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DSNhanVien.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TinhTrangPhong.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TrangThietBi.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb

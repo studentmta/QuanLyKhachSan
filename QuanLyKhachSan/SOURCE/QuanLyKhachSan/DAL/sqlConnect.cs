@@ -10,7 +10,7 @@ namespace QuanLyKhachSan.DAL
 {
     class sqlConnect
     {
-        private string strConn = @"Data Source=.;Initial Catalog=QLKhachSan;Integrated Security=True";
+        string strConn = @"Data Source=;Initial Catalog=QLKhachSan;Integrated Security=True";
         private SqlCommand cmd = null;
         private SqlConnection conn = null;
 
@@ -42,7 +42,7 @@ namespace QuanLyKhachSan.DAL
         public SqlDataReader getDataTable(string table)
         {
             SqlDataReader dr = null;
-            string query = "select * from" + table;
+            string query = "select * from " + table;
             cmd = new SqlCommand(query, conn);
             this.openConnection();
             dr = cmd.ExecuteReader();

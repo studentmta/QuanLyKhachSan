@@ -19,5 +19,15 @@ namespace QuanLyKhachSan.DAL
             cmd.Parameters.AddWithValue("@TenChucVu", cv.TenChucVu);
             cmd.ExecuteNonQuery();
         }
+
+        public void EditChucVu(ChucVu cv)
+        {
+            openConnection();
+            string query = "update CHUCVU set TenChucVu = @TenChucVu where MaChucVu = @MaChucVu";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@MaChucVu", cv.MaChucVu);
+            cmd.Parameters.AddWithValue("@TenChucVu", cv.TenChucVu);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

@@ -47,5 +47,12 @@ namespace QuanLyKhachSan.GUI
             }
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.PhieuDangKy pkd = new ENTITY.PhieuDangKy(txtMaPhieuDK.Text.Trim(), txtMaKH.Text.Trim(), txtMaNV.Text.Trim(), dtNgayLap.Value, dtNgayDi.Value, txtMaPhong.Text.Trim(), txtTraTruoc.Text.Trim(), txtDonVi.Text.Trim());
+            DAL.PhieuDangKy_Controler p = new DAL.PhieuDangKy_Controler();
+            p.EditPhieuDangKy(pkd);
+        }
     }
 }

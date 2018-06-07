@@ -259,6 +259,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -282,6 +283,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChucVu";
             this.Text = "Chức vụ";
+            this.Load += new System.EventHandler(this.frmChucVu_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,27 @@ namespace QuanLyKhachSan.GUI
             InitializeComponent();
         }
 
+        #region func
+        public void showLsvCV()
+        {
+            lsvChucVu.Items.Clear();
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            SqlDataReader dr = conn.getDataTable("CHUCVU");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaChucVu"].ToString();
+                item.SubItems.Add(dr["TenChucVu"].ToString());
+                lsvChucVu.Items.Add(item);
+            }
+        }
+
         private void resetControl()
         {
             txtMaCV.ResetText();
             txtTenCV.ResetText();
         }
-
+        #endregion
         private void btnLuu_Click(object sender, EventArgs e)
         {
             ENTITY.ChucVu cv = new ENTITY.ChucVu(txtMaCV.Text.Trim(), txtTenCV.Text.Trim());
@@ -44,6 +60,20 @@ namespace QuanLyKhachSan.GUI
         private void btnHuy_Click(object sender, EventArgs e)
         {
             resetControl();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.ChucVu cv = new ENTITY.ChucVu(txtMaCV.Text.Trim(), txtTenCV.Text.Trim());
+            DAL.ChucVu_Controler ecv = new DAL.ChucVu_Controler();
+            ecv.EditChucVu(cv);
+            showLsvCV();
+            resetControl();
+        }
+
+        private void frmChucVu_Load(object sender, EventArgs e)
+        {
+            showLsvCV();
         }
     }
 }

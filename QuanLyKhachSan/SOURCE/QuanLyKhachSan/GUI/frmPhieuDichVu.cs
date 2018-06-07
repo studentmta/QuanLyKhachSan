@@ -45,5 +45,12 @@ namespace QuanLyKhachSan.GUI
             }
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.PhieuDichVu pdv = new ENTITY.PhieuDichVu(txtMaPhieuDV.Text.Trim(), txtMaPhieuDK.Text.Trim(), txtTenDV.Text.Trim(), txtGiaDichVu.Text.Trim());
+            DAL.PhieuDichVu_Controler p = new DAL.PhieuDichVu_Controler();
+            p.EditPhieuDichVu(pdv);
+        }
     }
 }

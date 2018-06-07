@@ -20,5 +20,16 @@ namespace QuanLyKhachSan.DAL
             cmd.Parameters.AddWithValue("@TrangBi", lp.TrangBi);
             cmd.ExecuteNonQuery();
         }
+
+        public void EditLoaiPhong(LoaiPhong lp)
+        {
+            openConnection();
+            string query = "update LOAIPHONG set TenLoaiPhong = @TenLoaiPhong, TrangBi = @TrangBi where MaLoaiPhong = @MaLoaiPhong";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@MaLoaiPhong", lp.MaLoaiPhong);
+            cmd.Parameters.AddWithValue("@TenLoaiPhong", lp.TenLoaiPhong);
+            cmd.Parameters.AddWithValue("@TrangBi", lp.TrangBi);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

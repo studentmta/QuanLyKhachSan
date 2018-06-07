@@ -46,5 +46,13 @@ namespace QuanLyKhachSan.GUI
         {
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.HoaDon hoaDon = new ENTITY.HoaDon(txtMaHD.Text.Trim(), dtNgaytt.Value, txtSoTienDatTruoc.Text.Trim(), txtDonVi.Text.Trim(), txtmaNV.Text.Trim());
+            DAL.HoaDon_Controler editHoaDon = new DAL.HoaDon_Controler();
+            editHoaDon.EditHoaDon(hoaDon);
+            resetControl();
+        }
     }
 }

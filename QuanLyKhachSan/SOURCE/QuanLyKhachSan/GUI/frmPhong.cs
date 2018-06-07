@@ -47,5 +47,12 @@ namespace QuanLyKhachSan.GUI
             }
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.Phong p = new ENTITY.Phong(txtMaPhong.Text.Trim(), txtTenPhong.Text.Trim(), txtTinhTrang.Text.Trim(), txtMaLP.Text.Trim(), txtGiaPhong.Text.Trim(), txtDonVi.Text.Trim());
+            DAL.Phong_Controler a = new DAL.Phong_Controler();
+            a.EditPhong(p);
+        }
     }
 }

@@ -45,5 +45,12 @@ namespace QuanLyKhachSan.GUI
         {
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.LoaiPhong lp = new ENTITY.LoaiPhong(txtMaPhong.Text.Trim(), txtTenLP.Text.Trim(), txtTrangBi.Text.Trim());
+            DAL.LoaiPhong_Controler l = new DAL.LoaiPhong_Controler();
+            l.EditLoaiPhong(lp);
+        }
     }
 }

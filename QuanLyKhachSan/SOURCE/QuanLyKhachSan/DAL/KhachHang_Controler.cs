@@ -24,5 +24,20 @@ namespace QuanLyKhachSan.DAL
             cmd.Parameters.AddWithValue("@QuocTich", kh.QuocTich);
             cmd.ExecuteNonQuery();
         }
+
+        public void EditKhachHang(KhachHang kh)
+        {
+            openConnection();
+            string query = "update KHACHHANG set TenKH = @TenKH, CMND = @CMND, DiaChi = @DiaChi, GioiTinh = @GioiTinh, SDT = @SDT, QuocTich = @QuocTich where MaKH = @MaKH";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@MaKH", kh.MaKH);
+            cmd.Parameters.AddWithValue("@TenKH", kh.TenKH);
+            cmd.Parameters.AddWithValue("@CMND", kh.CMND);
+            cmd.Parameters.AddWithValue("@DiaChi", kh.DiaChi);
+            cmd.Parameters.AddWithValue("@GioiTinh", kh.GioiTinh);
+            cmd.Parameters.AddWithValue("@SDT", kh.SDT);
+            cmd.Parameters.AddWithValue("@QuocTich", kh.QuocTich);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

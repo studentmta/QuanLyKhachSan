@@ -58,5 +58,12 @@ namespace QuanLyKhachSan.GUI
         {
             resetControl();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ENTITY.NhanVien nv = new ENTITY.NhanVien(txtMaNV.Text.Trim(), txtTenNV.Text.Trim(), txtChucVu.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtSDT.Text.Trim());
+            DAL.NhanVien_Controler n = new DAL.NhanVien_Controler();
+            n.EditNhanVien(nv);
+        }
     }
 }
