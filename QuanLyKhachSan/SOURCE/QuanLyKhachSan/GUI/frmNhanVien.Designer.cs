@@ -450,6 +450,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNhanVien";
             this.Text = "Nhân viên";
+            this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

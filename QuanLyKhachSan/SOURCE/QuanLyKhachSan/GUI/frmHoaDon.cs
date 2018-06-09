@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaHD.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace QuanLyKhachSan.GUI
             {
                 h.insertHoaDon(hd);
             }
+            showLsvHD();
             resetControl();
         }
 
@@ -52,7 +55,28 @@ namespace QuanLyKhachSan.GUI
             ENTITY.HoaDon hoaDon = new ENTITY.HoaDon(txtMaHD.Text.Trim(), dtNgaytt.Value, txtSoTienDatTruoc.Text.Trim(), txtDonVi.Text.Trim(), txtmaNV.Text.Trim());
             DAL.HoaDon_Controler editHoaDon = new DAL.HoaDon_Controler();
             editHoaDon.EditHoaDon(hoaDon);
+            showLsvHD();
             resetControl();
+        }
+        private void showLsvHD()
+        {
+            lsvHoaDon.Items.Clear();
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            SqlDataReader dr = sql.getDataTable("HOADON");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaHoaDon"].ToString();
+                item.SubItems.Add(dr["NgayThanhToan"].ToString());
+                item.SubItems.Add(dr["SoTienDatTruoc"].ToString());
+                item.SubItems.Add(dr["DonVi"].ToString());
+                item.SubItems.Add(dr["MaNV"].ToString());
+                lsvHoaDon.Items.Add(item);
+            }
+        }
+        private void frmHoaDon_Load(object sender, EventArgs e)
+        {
+            showLsvHD();
         }
     }
 }

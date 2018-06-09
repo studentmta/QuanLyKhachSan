@@ -32,7 +32,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lsvChucVu = new System.Windows.Forms.ListView();
+            this.lsvHoaDon = new System.Windows.Forms.ListView();
             this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,7 +102,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lsvChucVu);
+            this.groupBox4.Controls.Add(this.lsvHoaDon);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 60);
             this.groupBox4.Name = "groupBox4";
@@ -110,23 +110,23 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             // 
-            // lsvChucVu
+            // lsvHoaDon
             // 
-            this.lsvChucVu.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.lsvChucVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvHoaDon.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lsvHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colMaCV,
             this.colTenCV,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.lsvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvChucVu.ForeColor = System.Drawing.Color.Black;
-            this.lsvChucVu.Location = new System.Drawing.Point(3, 16);
-            this.lsvChucVu.Name = "lsvChucVu";
-            this.lsvChucVu.Size = new System.Drawing.Size(419, 368);
-            this.lsvChucVu.TabIndex = 0;
-            this.lsvChucVu.UseCompatibleStateImageBehavior = false;
-            this.lsvChucVu.View = System.Windows.Forms.View.Details;
+            this.lsvHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.lsvHoaDon.Location = new System.Drawing.Point(3, 16);
+            this.lsvHoaDon.Name = "lsvHoaDon";
+            this.lsvHoaDon.Size = new System.Drawing.Size(419, 368);
+            this.lsvHoaDon.TabIndex = 0;
+            this.lsvHoaDon.UseCompatibleStateImageBehavior = false;
+            this.lsvHoaDon.View = System.Windows.Forms.View.Details;
             // 
             // colMaCV
             // 
@@ -378,6 +378,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHoaDon";
             this.Text = "Hóa đơn";
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -394,7 +395,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView lsvChucVu;
+        private System.Windows.Forms.ListView lsvHoaDon;
         private System.Windows.Forms.ColumnHeader colMaCV;
         private System.Windows.Forms.ColumnHeader colTenCV;
         private System.Windows.Forms.GroupBox groupBox3;

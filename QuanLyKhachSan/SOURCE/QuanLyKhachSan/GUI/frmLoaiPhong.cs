@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaPhong.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -38,6 +40,7 @@ namespace QuanLyKhachSan.GUI
             {
                 l.insertLoaiPhong(lp);
             }
+            showLsvLoaiPhong();
             resetControl();
         }
 
@@ -51,6 +54,25 @@ namespace QuanLyKhachSan.GUI
             ENTITY.LoaiPhong lp = new ENTITY.LoaiPhong(txtMaPhong.Text.Trim(), txtTenLP.Text.Trim(), txtTrangBi.Text.Trim());
             DAL.LoaiPhong_Controler l = new DAL.LoaiPhong_Controler();
             l.EditLoaiPhong(lp);
+            showLsvLoaiPhong();
+        }
+        private void showLsvLoaiPhong()
+        {
+            lsvLoaiPhong.Items.Clear();
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            SqlDataReader dr = sql.getDataTable("LOAIPHONG");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaLoaiPhong"].ToString();
+                item.SubItems.Add(dr["TenLoaiPhong"].ToString());
+                item.SubItems.Add(dr["TrangBi"].ToString());
+                lsvLoaiPhong.Items.Add(item);
+            }
+        }
+        private void frmLoaiPhong_Load(object sender, EventArgs e)
+        {
+            showLsvLoaiPhong();
         }
     }
 }

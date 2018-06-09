@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaPhieuDV.Focus();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace QuanLyKhachSan.GUI
             {
                 p.insertPhieuDichVu(pdv);
             }
+            showLsvPDV();
             resetControl();
         }
 
@@ -51,6 +54,26 @@ namespace QuanLyKhachSan.GUI
             ENTITY.PhieuDichVu pdv = new ENTITY.PhieuDichVu(txtMaPhieuDV.Text.Trim(), txtMaPhieuDK.Text.Trim(), txtTenDV.Text.Trim(), txtGiaDichVu.Text.Trim());
             DAL.PhieuDichVu_Controler p = new DAL.PhieuDichVu_Controler();
             p.EditPhieuDichVu(pdv);
+            showLsvPDV();
+        }
+        private void showLsvPDV()
+        {
+            lsvPDV.Items.Clear();
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            SqlDataReader dr = sql.getDataTable("PHIEUDICHVU");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaPhieuDichVu"].ToString();
+                item.SubItems.Add(dr["MaPhieuDangKy"].ToString());
+                item.SubItems.Add(dr["TenDichVu"].ToString());
+                item.SubItems.Add(dr["GiaDichVu"].ToString());
+                lsvPDV.Items.Add(item);
+            }
+        }
+        private void frmPhieuDichVu_Load(object sender, EventArgs e)
+        {
+            showLsvPDV();
         }
     }
 }

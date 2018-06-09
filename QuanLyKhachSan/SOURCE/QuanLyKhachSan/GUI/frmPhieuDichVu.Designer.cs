@@ -33,7 +33,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lsvChucVu = new System.Windows.Forms.ListView();
+            this.lsvPDV = new System.Windows.Forms.ListView();
             this.colMaCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenCV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -112,7 +112,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lsvChucVu);
+            this.groupBox4.Controls.Add(this.lsvPDV);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 60);
             this.groupBox4.Name = "groupBox4";
@@ -120,22 +120,22 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             // 
-            // lsvChucVu
+            // lsvPDV
             // 
-            this.lsvChucVu.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.lsvChucVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvPDV.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lsvPDV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colMaCV,
             this.colTenCV,
             this.columnHeader1,
             this.columnHeader2});
-            this.lsvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvChucVu.ForeColor = System.Drawing.Color.Black;
-            this.lsvChucVu.Location = new System.Drawing.Point(3, 16);
-            this.lsvChucVu.Name = "lsvChucVu";
-            this.lsvChucVu.Size = new System.Drawing.Size(429, 368);
-            this.lsvChucVu.TabIndex = 0;
-            this.lsvChucVu.UseCompatibleStateImageBehavior = false;
-            this.lsvChucVu.View = System.Windows.Forms.View.Details;
+            this.lsvPDV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvPDV.ForeColor = System.Drawing.Color.Black;
+            this.lsvPDV.Location = new System.Drawing.Point(3, 16);
+            this.lsvPDV.Name = "lsvPDV";
+            this.lsvPDV.Size = new System.Drawing.Size(429, 368);
+            this.lsvPDV.TabIndex = 0;
+            this.lsvPDV.UseCompatibleStateImageBehavior = false;
+            this.lsvPDV.View = System.Windows.Forms.View.Details;
             // 
             // colMaCV
             // 
@@ -347,6 +347,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhieuDichVu";
             this.Text = "frmPhieuDichVu";
+            this.Load += new System.EventHandler(this.frmPhieuDichVu_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -364,7 +365,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView lsvChucVu;
+        private System.Windows.Forms.ListView lsvPDV;
         private System.Windows.Forms.ColumnHeader colMaCV;
         private System.Windows.Forms.ColumnHeader colTenCV;
         private System.Windows.Forms.GroupBox groupBox3;

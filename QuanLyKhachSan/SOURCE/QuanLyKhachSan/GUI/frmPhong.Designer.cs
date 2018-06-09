@@ -38,7 +38,7 @@
             this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsvNhanVien = new System.Windows.Forms.ListView();
+            this.lsvPhong = new System.Windows.Forms.ListView();
             this.colNgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -138,22 +138,22 @@
             this.colMaNV.Text = "Mã phòng";
             this.colMaNV.Width = 106;
             // 
-            // lsvNhanVien
+            // lsvPhong
             // 
-            this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colMaNV,
             this.colHoTen,
             this.colGioiTinh,
             this.colNgaySinh,
             this.colDiaChi,
             this.colDanToc});
-            this.lsvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvNhanVien.Location = new System.Drawing.Point(3, 16);
-            this.lsvNhanVien.Name = "lsvNhanVien";
-            this.lsvNhanVien.Size = new System.Drawing.Size(800, 171);
-            this.lsvNhanVien.TabIndex = 0;
-            this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
-            this.lsvNhanVien.View = System.Windows.Forms.View.Details;
+            this.lsvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvPhong.Location = new System.Drawing.Point(3, 16);
+            this.lsvPhong.Name = "lsvPhong";
+            this.lsvPhong.Size = new System.Drawing.Size(800, 171);
+            this.lsvPhong.TabIndex = 0;
+            this.lsvPhong.UseCompatibleStateImageBehavior = false;
+            this.lsvPhong.View = System.Windows.Forms.View.Details;
             // 
             // colNgaySinh
             // 
@@ -169,7 +169,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lsvNhanVien);
+            this.groupBox4.Controls.Add(this.lsvPhong);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 48);
             this.groupBox4.Name = "groupBox4";
@@ -402,6 +402,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhong";
             this.Text = "Phòng ";
+            this.Load += new System.EventHandler(this.frmPhong_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -424,7 +425,7 @@
         private System.Windows.Forms.ColumnHeader colGioiTinh;
         private System.Windows.Forms.ColumnHeader colHoTen;
         private System.Windows.Forms.ColumnHeader colMaNV;
-        private System.Windows.Forms.ListView lsvNhanVien;
+        private System.Windows.Forms.ListView lsvPhong;
         private System.Windows.Forms.ColumnHeader colNgaySinh;
         private System.Windows.Forms.ColumnHeader colDiaChi;
         private System.Windows.Forms.GroupBox groupBox4;

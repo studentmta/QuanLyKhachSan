@@ -55,7 +55,7 @@
             this.colGioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsvNhanVien = new System.Windows.Forms.ListView();
+            this.lsvPhieuDangKy = new System.Windows.Forms.ListView();
             this.colNgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -319,9 +319,9 @@
             this.colMaNV.Text = "Mã phiếu đăng ký";
             this.colMaNV.Width = 106;
             // 
-            // lsvNhanVien
+            // lsvPhieuDangKy
             // 
-            this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvPhieuDangKy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colMaNV,
             this.colHoTen,
             this.colGioiTinh,
@@ -330,13 +330,13 @@
             this.colDanToc,
             this.colQuocTich,
             this.colSoDienThoai});
-            this.lsvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvNhanVien.Location = new System.Drawing.Point(3, 16);
-            this.lsvNhanVien.Name = "lsvNhanVien";
-            this.lsvNhanVien.Size = new System.Drawing.Size(845, 125);
-            this.lsvNhanVien.TabIndex = 0;
-            this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
-            this.lsvNhanVien.View = System.Windows.Forms.View.Details;
+            this.lsvPhieuDangKy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvPhieuDangKy.Location = new System.Drawing.Point(3, 16);
+            this.lsvPhieuDangKy.Name = "lsvPhieuDangKy";
+            this.lsvPhieuDangKy.Size = new System.Drawing.Size(845, 125);
+            this.lsvPhieuDangKy.TabIndex = 0;
+            this.lsvPhieuDangKy.UseCompatibleStateImageBehavior = false;
+            this.lsvPhieuDangKy.View = System.Windows.Forms.View.Details;
             // 
             // colNgaySinh
             // 
@@ -346,7 +346,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lsvNhanVien);
+            this.groupBox4.Controls.Add(this.lsvPhieuDangKy);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 38);
             this.groupBox4.Name = "groupBox4";
@@ -466,6 +466,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhieuDangKy";
             this.Text = "Phiếu đăng ký";
+            this.Load += new System.EventHandler(this.frmPhieuDangKy_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -505,7 +506,7 @@
         private System.Windows.Forms.ColumnHeader colGioiTinh;
         private System.Windows.Forms.ColumnHeader colHoTen;
         private System.Windows.Forms.ColumnHeader colMaNV;
-        private System.Windows.Forms.ListView lsvNhanVien;
+        private System.Windows.Forms.ListView lsvPhieuDangKy;
         private System.Windows.Forms.ColumnHeader colNgaySinh;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;

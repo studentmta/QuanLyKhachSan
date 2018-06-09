@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaKH.Focus();
         }
         private bool checkGioiTinh()
         {
@@ -53,6 +55,7 @@ namespace QuanLyKhachSan.GUI
             {
                 k.insertKhachHang(kh);
             }
+            showLSvKhachHang();
             resetControl();
         }
 
@@ -61,6 +64,29 @@ namespace QuanLyKhachSan.GUI
             ENTITY.KhachHang kh = new ENTITY.KhachHang(txtMaKH.Text.Trim(), txtHoTen.Text.Trim(), txtCMND.Text.Trim(), txtDiaChi.Text.Trim(), checkGioiTinh(), txtSDT.Text.Trim(), txtQuocTich.Text.Trim());
             DAL.KhachHang_Controler k = new DAL.KhachHang_Controler();
             k.EditKhachHang(kh);
+            showLSvKhachHang();
+        }
+        private void showLSvKhachHang()
+        {
+            lsvKhachHang.Items.Clear();
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            SqlDataReader dr = sql.getDataTable("KHACHHANG");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaKH"].ToString();
+                item.SubItems.Add(dr["TenKH"].ToString());
+                item.SubItems.Add(dr["CMND"].ToString());
+                item.SubItems.Add(dr["DiaChi"].ToString());
+                item.SubItems.Add(dr["GioiTinh"].ToString());
+                item.SubItems.Add(dr["SDT"].ToString());
+                item.SubItems.Add(dr["QuocTich"].ToString());
+                lsvKhachHang.Items.Add(item);
+            }
+        }
+        private void frmKhachHang_Load(object sender, EventArgs e)
+        {
+            showLSvKhachHang();
         }
     }
 }

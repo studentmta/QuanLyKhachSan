@@ -48,6 +48,7 @@ namespace QuanLyKhachSan.GUI
             {
                 c.insertChucVu(cv);
             }
+            showLsvCV();
             resetControl();
         }
 
@@ -55,6 +56,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaCV.Focus();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

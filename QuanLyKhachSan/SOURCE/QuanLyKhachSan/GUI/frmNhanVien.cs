@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace QuanLyKhachSan.GUI
         {
             kt = true;
             resetControl();
+            txtMaNV.Focus();
         }
         private bool checkGioiTinh()
         {
@@ -51,6 +53,7 @@ namespace QuanLyKhachSan.GUI
             {
                 n.insertNhanVien(nv);
             }
+            showLsvNhanVien();
             resetControl();
         }
 
@@ -64,6 +67,30 @@ namespace QuanLyKhachSan.GUI
             ENTITY.NhanVien nv = new ENTITY.NhanVien(txtMaNV.Text.Trim(), txtTenNV.Text.Trim(), txtChucVu.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtSDT.Text.Trim());
             DAL.NhanVien_Controler n = new DAL.NhanVien_Controler();
             n.EditNhanVien(nv);
+            showLsvNhanVien();
+        }
+
+        private void showLsvNhanVien()
+        {
+            lsvNhanVien.Items.Clear();
+            DAL.sqlConnect sql = new DAL.sqlConnect();
+            SqlDataReader dr = sql.getDataTable("NHANVIEN");
+            while (dr.Read())
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr["MaNV"].ToString();
+                item.SubItems.Add(dr["TenNV"].ToString());
+                item.SubItems.Add(dr["MaChucVu"].ToString());
+                item.SubItems.Add(dr["GioiTinh"].ToString());
+                item.SubItems.Add(dr["NgaySinh"].ToString());
+                item.SubItems.Add(dr["DiaChi"].ToString());
+                item.SubItems.Add(dr["SDT"].ToString());
+                lsvNhanVien.Items.Add(item);
+            }
+        }
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+            showLsvNhanVien();
         }
     }
 }
