@@ -18,6 +18,32 @@ namespace QuanLyKhachSan.GUI
         {
             InitializeComponent();
         }
+
+        public void lockControl()
+        {
+            txtMaHD.Enabled = false;
+            dtNgaytt.Enabled = false;
+            txtSoTienDatTruoc.Enabled = false;
+            txtDonVi.Enabled = false;
+            txtmaNV.Enabled = false;
+            btnThem.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            lsvHoaDon.Enabled = true;
+        }
+        public void openControl()
+        {
+            txtMaHD.Enabled = true;
+            dtNgaytt.Enabled = true;
+            txtSoTienDatTruoc.Enabled = true;
+            txtDonVi.Enabled = true;
+            txtmaNV.Enabled = true;
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            lsvHoaDon.Enabled = false;
+        }
         private void resetControl()
         {
             txtMaHD.ResetText();
@@ -29,6 +55,9 @@ namespace QuanLyKhachSan.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             kt = true;
+            openControl();
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             resetControl();
             txtMaHD.Focus();
         }
@@ -41,6 +70,7 @@ namespace QuanLyKhachSan.GUI
             {
                 h.insertHoaDon(hd);
             }
+            lockControl();
             showLsvHD();
             resetControl();
         }
@@ -52,6 +82,11 @@ namespace QuanLyKhachSan.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            kt = false;
+            openControl();
+            txtMaHD.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
             ENTITY.HoaDon hoaDon = new ENTITY.HoaDon(txtMaHD.Text.Trim(), dtNgaytt.Value, txtSoTienDatTruoc.Text.Trim(), txtDonVi.Text.Trim(), txtmaNV.Text.Trim());
             DAL.HoaDon_Controler editHoaDon = new DAL.HoaDon_Controler();
             editHoaDon.EditHoaDon(hoaDon);
@@ -76,11 +111,13 @@ namespace QuanLyKhachSan.GUI
         }
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            lockControl();
             showLsvHD();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            lockControl();
             string query = "delete from HOADON where MaHoaDon = '" + txtMaHD.Text.Trim() + "'";
             DAL.sqlConnect conn = new DAL.sqlConnect();
             conn.execNonQuery(query);

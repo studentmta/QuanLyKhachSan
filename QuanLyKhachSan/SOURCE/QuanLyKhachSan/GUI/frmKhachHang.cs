@@ -19,6 +19,38 @@ namespace QuanLyKhachSan.GUI
             InitializeComponent();
         }
 
+        public void lockControl()
+        {
+            txtMaKH.Enabled = false;
+            txtHoTen.Enabled = false;
+            rdbNam.Enabled = false;
+            rdbNu.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtCMND.Enabled = false;
+            txtSDT.Enabled = false;
+            txtQuocTich.Enabled = false;
+            btnThem.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            lsvKhachHang.Enabled = true;
+        }
+        public void openControl()
+        {
+            txtMaKH.Enabled = true;
+            txtHoTen.Enabled = true;
+            rdbNam.Enabled = true;
+            rdbNu.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtCMND.Enabled = true;
+            txtSDT.Enabled = true;
+            txtQuocTich.Enabled = true;
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            lsvKhachHang.Enabled = false;
+        }
+
         private void resetControl()
         {
             txtCMND.ResetText();
@@ -31,6 +63,9 @@ namespace QuanLyKhachSan.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             kt = true;
+            openControl();
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             resetControl();
             txtMaKH.Focus();
         }
@@ -49,6 +84,7 @@ namespace QuanLyKhachSan.GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            lockControl();
             ENTITY.KhachHang kh = new ENTITY.KhachHang(txtMaKH.Text.Trim(), txtHoTen.Text.Trim(), txtCMND.Text.Trim(), txtDiaChi.Text.Trim(), checkGioiTinh(), txtSDT.Text.Trim(), txtQuocTich.Text.Trim());
             DAL.KhachHang_Controler k = new DAL.KhachHang_Controler();
             if (kt == true)
@@ -61,6 +97,11 @@ namespace QuanLyKhachSan.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            kt = false;
+            openControl();
+            txtMaKH.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
             ENTITY.KhachHang kh = new ENTITY.KhachHang(txtMaKH.Text.Trim(), txtHoTen.Text.Trim(), txtCMND.Text.Trim(), txtDiaChi.Text.Trim(), checkGioiTinh(), txtSDT.Text.Trim(), txtQuocTich.Text.Trim());
             DAL.KhachHang_Controler k = new DAL.KhachHang_Controler();
             k.EditKhachHang(kh);
@@ -86,14 +127,21 @@ namespace QuanLyKhachSan.GUI
         }
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
+            lockControl();
             showLSvKhachHang();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            lockControl();
             string query = "delete from KHACHHANG where MaKH = '" + txtMaKH.Text.Trim() + "'";
             DAL.sqlConnect conn = new DAL.sqlConnect();
             conn.execNonQuery(query);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            lockControl();
         }
     }
 }

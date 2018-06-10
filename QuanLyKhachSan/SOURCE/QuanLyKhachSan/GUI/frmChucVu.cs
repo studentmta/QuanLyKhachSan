@@ -19,6 +19,26 @@ namespace QuanLyKhachSan.GUI
             InitializeComponent();
         }
 
+        public void lockControl()
+        {
+            txtMaCV.Enabled = false;
+            txtTenCV.Enabled = false;
+            btnThem.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            lsvChucVu.Enabled = true;
+        }
+        public void openControl()
+        {
+            txtMaCV.Enabled = true;
+            txtTenCV.Enabled = true;
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            lsvChucVu.Enabled = false;
+        }
+
         #region func
         public void showLsvCV()
         {
@@ -48,6 +68,7 @@ namespace QuanLyKhachSan.GUI
             {
                 c.insertChucVu(cv);
             }
+            lockControl();
             showLsvCV();
             resetControl();
         }
@@ -55,17 +76,26 @@ namespace QuanLyKhachSan.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             kt = true;
+            openControl();
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             resetControl();
             txtMaCV.Focus();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            lockControl();
             resetControl();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            kt = false;
+            openControl();
+            txtMaCV.Enabled = false;
+            btnThem.Enabled = false;
+            txtMaCV.Focus();
             ENTITY.ChucVu cv = new ENTITY.ChucVu(txtMaCV.Text.Trim(), txtTenCV.Text.Trim());
             DAL.ChucVu_Controler ecv = new DAL.ChucVu_Controler();
             ecv.EditChucVu(cv);
@@ -75,6 +105,7 @@ namespace QuanLyKhachSan.GUI
 
         private void frmChucVu_Load(object sender, EventArgs e)
         {
+            lockControl();
             showLsvCV();
         }
 
@@ -83,6 +114,7 @@ namespace QuanLyKhachSan.GUI
             string query = "delete from CHUCVU where MaChucVu = '" + txtMaCV.Text.Trim() + "'";
             DAL.sqlConnect conn = new DAL.sqlConnect();
             conn.execNonQuery(query);
+            lockControl();
         }
     }
 }

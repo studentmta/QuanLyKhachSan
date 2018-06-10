@@ -105,3 +105,24 @@ C:\Users\Administrator.PC\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKha
 C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
 C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmChucVu.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmHoaDon.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmKhachHang.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmLoaiPhong.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmMain.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmNhanVien.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDangKy.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhieuDichVu.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmPhong.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DoanhThu.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_DSNhanVien.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TinhTrangPhong.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.frmTK_TrangThietBi.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\Suu Nguyen\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache

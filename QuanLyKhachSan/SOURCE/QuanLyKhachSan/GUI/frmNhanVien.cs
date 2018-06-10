@@ -18,6 +18,36 @@ namespace QuanLyKhachSan.GUI
         {
             InitializeComponent();
         }
+
+        public void lockControl()
+        {
+            txtMaNV.Enabled = false;
+            txtChucVu.Enabled = false;
+            txtTenNV.Enabled = false;
+            dtNgaySinh.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtSDT.Enabled = false;
+            btnThem.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            lsvNhanVien.Enabled = true;
+        }
+        public void openControl()
+        {
+            txtMaNV.Enabled = true;
+            txtChucVu.Enabled = true;
+            txtTenNV.Enabled = true;
+            dtNgaySinh.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtSDT.Enabled = true;
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            lsvNhanVien.Enabled = false;
+        }
+
         private void resetControl()
         {
             txtChucVu.ResetText();
@@ -29,6 +59,10 @@ namespace QuanLyKhachSan.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             kt = true;
+            openControl();
+            txtMaNV.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
             resetControl();
             txtMaNV.Focus();
         }
@@ -47,6 +81,7 @@ namespace QuanLyKhachSan.GUI
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            lockControl();
             ENTITY.NhanVien nv = new ENTITY.NhanVien(txtMaNV.Text.Trim(), txtTenNV.Text.Trim(), txtChucVu.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtSDT.Text.Trim());
             DAL.NhanVien_Controler n = new DAL.NhanVien_Controler();
             if (kt==true)
@@ -59,11 +94,17 @@ namespace QuanLyKhachSan.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            lockControl();
             resetControl();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            kt = false;
+            openControl();
+            txtMaNV.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
             ENTITY.NhanVien nv = new ENTITY.NhanVien(txtMaNV.Text.Trim(), txtTenNV.Text.Trim(), txtChucVu.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtSDT.Text.Trim());
             DAL.NhanVien_Controler n = new DAL.NhanVien_Controler();
             n.EditNhanVien(nv);
@@ -90,11 +131,13 @@ namespace QuanLyKhachSan.GUI
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            lockControl();
             showLsvNhanVien();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            lockControl();
             string query = "delete from NHANVIEN where MaNV = '" + txtMaNV.Text.Trim() + "'";
             DAL.sqlConnect conn = new DAL.sqlConnect();
             conn.execNonQuery(query);

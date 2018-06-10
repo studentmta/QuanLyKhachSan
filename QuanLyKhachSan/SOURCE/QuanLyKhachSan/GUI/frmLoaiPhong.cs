@@ -19,6 +19,30 @@ namespace QuanLyKhachSan.GUI
             InitializeComponent();
         }
 
+        public void lockControl()
+        {
+            txtMaPhong.Enabled = false;
+            txtTenLP.Enabled = false;
+            txtTrangBi.Enabled = false;
+            btnThem.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            lsvLoaiPhong.Enabled = true;
+        }
+
+        public void openControl()
+        {
+            txtMaPhong.Enabled = true;
+            txtTenLP.Enabled = true;
+            txtTrangBi.Enabled = true;
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            lsvLoaiPhong.Enabled = false;
+
+        }
+
         private void resetControl()
         {
             txtMaPhong.ResetText();
@@ -28,12 +52,16 @@ namespace QuanLyKhachSan.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             kt = true;
+            openControl();
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             resetControl();
             txtMaPhong.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            lockControl();
             ENTITY.LoaiPhong lp = new ENTITY.LoaiPhong(txtMaPhong.Text.Trim(), txtTenLP.Text.Trim(), txtTrangBi.Text.Trim());
             DAL.LoaiPhong_Controler l = new DAL.LoaiPhong_Controler();
             if (kt == true)
@@ -46,11 +74,16 @@ namespace QuanLyKhachSan.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            lockControl();
             resetControl();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            kt = false;
+            openControl();
+            btnThem.Enabled= false;
+            btnXoa.Enabled = false;
             ENTITY.LoaiPhong lp = new ENTITY.LoaiPhong(txtMaPhong.Text.Trim(), txtTenLP.Text.Trim(), txtTrangBi.Text.Trim());
             DAL.LoaiPhong_Controler l = new DAL.LoaiPhong_Controler();
             l.EditLoaiPhong(lp);
@@ -72,11 +105,13 @@ namespace QuanLyKhachSan.GUI
         }
         private void frmLoaiPhong_Load(object sender, EventArgs e)
         {
+            lockControl();
             showLsvLoaiPhong();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            lockControl();
             string query = "delete from LOAIPHONG where MaLoaiPhong = '" + txtMaPhong.Text.Trim() + "'";
             DAL.sqlConnect conn = new DAL.sqlConnect();
             conn.execNonQuery(query);
