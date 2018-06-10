@@ -12,13 +12,20 @@ namespace QuanLyKhachSan.DAL
     {
         public void insertLoaiPhong(LoaiPhong lp)
         {
-            openConnection();
-            string query = "insert into LOAIPHONG (MaLoaiPhong, TenLoaiPhong, TrangBi) values (@MaLoaiPhong, @TenLoaiPhong, @TrangBi)";
-            SqlCommand cmd = new SqlCommand(query, Conn);
-            cmd.Parameters.AddWithValue("@MaLoaiPhong", lp.MaLoaiPhong);
-            cmd.Parameters.AddWithValue("@TenLoaiPhong", lp.TenLoaiPhong);
-            cmd.Parameters.AddWithValue("@TrangBi", lp.TrangBi);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                openConnection();
+                string query = "insert into LOAIPHONG (MaLoaiPhong, TenLoaiPhong, TrangBi) values (@MaLoaiPhong, @TenLoaiPhong, @TrangBi)";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@MaLoaiPhong", lp.MaLoaiPhong);
+                cmd.Parameters.AddWithValue("@TenLoaiPhong", lp.TenLoaiPhong);
+                cmd.Parameters.AddWithValue("@TrangBi", lp.TrangBi);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         public void EditLoaiPhong(LoaiPhong lp)

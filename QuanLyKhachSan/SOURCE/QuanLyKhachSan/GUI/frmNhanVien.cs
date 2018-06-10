@@ -79,8 +79,8 @@ namespace QuanLyKhachSan.GUI
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = dr["MaNV"].ToString();
-                item.SubItems.Add(dr["TenNV"].ToString());
                 item.SubItems.Add(dr["MaChucVu"].ToString());
+                item.SubItems.Add(dr["TenNV"].ToString());
                 item.SubItems.Add(dr["GioiTinh"].ToString());
                 item.SubItems.Add(dr["NgaySinh"].ToString());
                 item.SubItems.Add(dr["DiaChi"].ToString());

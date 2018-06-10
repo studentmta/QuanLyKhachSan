@@ -180,7 +180,7 @@
             // 
             // colMaCV
             // 
-            this.colMaCV.Text = "Chức vụ";
+            this.colMaCV.Text = "Mã chức vụ";
             this.colMaCV.Width = 176;
             // 
             // groupBox4

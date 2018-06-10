@@ -12,12 +12,19 @@ namespace QuanLyKhachSan.DAL
     {
         public void insertChucVu(ChucVu cv)
         {
-            openConnection();
-            string query = "insert into CHUCVU(MaChucVu, TenChucVu) values (@MaChucVu, @TenChucVu)";
-            SqlCommand cmd = new SqlCommand(query, Conn);
-            cmd.Parameters.AddWithValue("@MaChucVu", cv.MaChucVu);
-            cmd.Parameters.AddWithValue("@TenChucVu", cv.TenChucVu);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                openConnection();
+                string query = "insert into CHUCVU(MaChucVu, TenChucVu) values (@MaChucVu, @TenChucVu)";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@MaChucVu", cv.MaChucVu);
+                cmd.Parameters.AddWithValue("@TenChucVu", cv.TenChucVu);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         public void EditChucVu(ChucVu cv)

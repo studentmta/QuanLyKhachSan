@@ -12,16 +12,24 @@ namespace QuanLyKhachSan.DAL
     {
         public void insertPhong(Phong p)
         {
-            openConnection();
-            string query = "insert into PHONG(MaPhong, TenPhong, TinhTrang, MaLoaiPhong, GiaPhong, DonVi) values (@MaPhong, @TenPhong, @TinhTrang, @MaLoaiPhong, @GiaPhong, @DonVi)";
-            SqlCommand cmd = new SqlCommand(query, Conn);
-            cmd.Parameters.AddWithValue("@MaPhong", p.MaPhong);
-            cmd.Parameters.AddWithValue("@TenPhong", p.TenPhong);
-            cmd.Parameters.AddWithValue("@TinhTrang", p.TinhTrang);
-            cmd.Parameters.AddWithValue("@MaLoaiPhong", p.MaLoaiPhong);
-            cmd.Parameters.AddWithValue("@GiaPhong", p.GiaPhong);
-            cmd.Parameters.AddWithValue("@DonVi", p.DonVi);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                openConnection();
+                string query = "insert into PHONG(MaPhong, TenPhong, TinhTrang, MaLoaiPhong, GiaPhong, DonVi) values (@MaPhong, @TenPhong, @TinhTrang, @MaLoaiPhong, @GiaPhong, @DonVi)";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@MaPhong", p.MaPhong);
+                cmd.Parameters.AddWithValue("@TenPhong", p.TenPhong);
+                cmd.Parameters.AddWithValue("@TinhTrang", p.TinhTrang);
+                cmd.Parameters.AddWithValue("@MaLoaiPhong", p.MaLoaiPhong);
+                cmd.Parameters.AddWithValue("@GiaPhong", p.GiaPhong);
+                cmd.Parameters.AddWithValue("@DonVi", p.DonVi);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
 
         public void EditPhong(Phong p)
