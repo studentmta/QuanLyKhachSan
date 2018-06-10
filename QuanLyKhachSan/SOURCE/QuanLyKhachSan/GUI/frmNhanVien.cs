@@ -92,5 +92,12 @@ namespace QuanLyKhachSan.GUI
         {
             showLsvNhanVien();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string query = "delete from NHANVIEN where MaNV = '" + txtMaNV.Text.Trim() + "'";
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            conn.execNonQuery(query);
+        }
     }
 }

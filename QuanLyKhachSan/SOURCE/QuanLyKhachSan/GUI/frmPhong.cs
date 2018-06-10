@@ -79,5 +79,12 @@ namespace QuanLyKhachSan.GUI
         {
             showLsvPhong();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string query = "delete from PHONG where MaPhong = '" + txtMaPhong.Text.Trim() + "'";
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            conn.execNonQuery(query);
+        }
     }
 }

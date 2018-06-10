@@ -81,5 +81,12 @@ namespace QuanLyKhachSan.GUI
         {
             showLsvPKD();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string query = "delete from PhieuDangKy where MaPhieuDangKy = '" + txtMaPhieuDK.Text.Trim() + "'";
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            conn.execNonQuery(query);
+        }
     }
 }

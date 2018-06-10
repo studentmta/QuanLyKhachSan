@@ -99,3 +99,9 @@ D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\D
 D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\SonCao\TTN\GIT_QLKS\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\Administrator.PC\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\Administrator.PC\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\Administrator.PC\Desktop\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\Administrator.PC\Desktop\QuanLyNhanSu\QuanLyKhachSan\QuanLyKhachSan\SOURCE\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb

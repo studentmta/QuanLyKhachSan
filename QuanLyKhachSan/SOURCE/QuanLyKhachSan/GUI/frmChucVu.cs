@@ -77,5 +77,12 @@ namespace QuanLyKhachSan.GUI
         {
             showLsvCV();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string query = "delete from CHUCVU where MaChucVu = '" + txtMaCV.Text.Trim() + "'";
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            conn.execNonQuery(query);
+        }
     }
 }

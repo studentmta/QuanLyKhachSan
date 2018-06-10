@@ -88,5 +88,12 @@ namespace QuanLyKhachSan.GUI
         {
             showLSvKhachHang();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string query = "delete from KHACHHANG where MaKH = '" + txtMaKH.Text.Trim() + "'";
+            DAL.sqlConnect conn = new DAL.sqlConnect();
+            conn.execNonQuery(query);
+        }
     }
 }
